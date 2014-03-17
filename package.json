@@ -1,7 +1,7 @@
 {
   "name": "flatten-object",
   "description": "Flatten a nested object",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "repository": {
     "url": "git://github.com/toddself/flatten-object.git"
   },
