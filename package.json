@@ -10,11 +10,10 @@
     "postinstall": "node post-install",
     "pre-commit": "npm run lint && npm test",
     "lint": "jshint",
-    "test": "tap test/*js",
-    "prepublish": "docme README.md -- --configure .jsdocrc.json"
+    "test": "tap test/*js"
   },
   "dependencies": {
-    "lodash.isobject": "^2.4.1"
+    "lodash.isobject": "~2.4.1"
   },
   "devDependencies": {
     "tap": "~0.4.4",

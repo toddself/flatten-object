@@ -20,17 +20,23 @@ function makeNewKey(key, itr, obj){
 }
 
 /**
- * Flattens a object that contains objects into a single level key
- * @method  flattenObject
- * @param   {object} obj object to flatten
+ * Flatten an object down to a optionally specified maximum depth
+ * @method  exports
+ * @param   {object} obj Object to flatten
+ * @param   {integer} [maxDepth=0] Maximum depth to recurse to. Zero is unlimited.
  * @returns {object} flattened object
  */
-var flattenObject = module.exports = function(obj, returnObject){
+var flattenObject = module.exports = function(obj, maxDepth, currDepth, returnObject){
   returnObject = returnObject || {};
+  maxDepth = maxDepth || 0;
+  currDepth = currDepth || 0;
+  // if we have a zero maxDepth, we want to go until we either reach bottom
+  // or we've hit max recursion in the interpreter, so keep moving the goal
+  var _maxDepth = maxDepth === 0 ? currDepth+1 : maxDepth;
 
   Object.keys(obj).forEach(function(key){
-    if(isObject(obj[key])){
-      return flattenObject(obj[key], returnObject);
+    if(isObject(obj[key]) && _maxDepth > currDepth){
+      return flattenObject(obj[key], maxDepth, ++currDepth, returnObject);
     } else {
       var nk = makeNewKey(key, 0, returnObject);
       returnObject[nk] = obj[key];
