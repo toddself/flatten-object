@@ -1,7 +1,7 @@
 {
   "name": "flatten-object",
   "description": "Flatten a nested object",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": {
     "url": "git://github.com/toddself/flatten-object.git"
   },
@@ -26,7 +26,11 @@
     "email": "<todd@selfassembled.org>",
     "url": "http://tck.io"
   },
-  "keywords": ["flatten", "object", "flatten object"],
+  "keywords": [
+    "flatten",
+    "object",
+    "flatten object"
+  ],
   "license": {
     "type": "MIT",
     "url": "https://github.com/toddself/flatten-object/blog/master/LICENSE"
