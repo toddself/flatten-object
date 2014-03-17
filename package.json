@@ -26,7 +26,7 @@
     "email": "<todd@selfassembled.org>",
     "url": "http://tck.io"
   },
-  "keywords": [],
+  "keywords": ["flatten", "object", "flatten object"],
   "license": {
     "type": "MIT",
     "url": "https://github.com/toddself/flatten-object/blog/master/LICENSE"
