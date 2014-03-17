@@ -1,0 +1,37 @@
+{
+  "name": "flatten-object",
+  "description": "Flatten a nested object",
+  "version": "0.0.0",
+  "repository": {
+    "url": "git://github.com/toddself/flatten-object.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "node post-install",
+    "pre-commit": "npm run lint && npm test",
+    "lint": "jshint",
+    "test": "tap test/*js",
+    "prepublish": "docme README.md -- --configure .jsdocrc.json"
+  },
+  "dependencies": {
+    "lodash.isobject": "^2.4.1"
+  },
+  "devDependencies": {
+    "tap": "~0.4.4",
+    "jshint": "~2.3.0",
+    "docme": "~0.1.5"
+  },
+  "author": {
+    "name": "Todd Kennedy",
+    "email": "<todd@selfassembled.org>",
+    "url": "http://tck.io"
+  },
+  "keywords": [],
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/toddself/flatten-object/blog/master/LICENSE"
+  },
+  "engine": {
+    "node": ">=0.8"
+  }
+}
