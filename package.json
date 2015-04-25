@@ -7,18 +7,13 @@
   },
   "main": "index.js",
   "scripts": {
-    "postinstall": "node post-install",
-    "pre-commit": "npm run lint && npm test",
-    "lint": "jshint",
     "test": "tap test/*js"
   },
   "dependencies": {
     "lodash.isobject": "~2.4.1"
   },
   "devDependencies": {
-    "tap": "~0.4.4",
-    "jshint": "~2.3.0",
-    "docme": "~0.1.5"
+    "tap": "~0.7.1"
   },
   "author": {
     "name": "Todd Kennedy",
